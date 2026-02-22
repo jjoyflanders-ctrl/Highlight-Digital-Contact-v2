@@ -130,7 +130,7 @@ function renderPerson(p){
   qs("mWebRow").href=person.website||"https://www.highlightindustries.com";
 
   renderQr(qs("qrDesktop"), url, 220);
-  renderQr(qs("qrMobile"), url, 176);
+  renderQr(qs("qrMobile"), url, 210);
 
   const save=()=>downloadText(`${person.slug}.vcf`, buildVCard(person, url), "text/vcard");
   qs("saveBtnDesktop").onclick=save;
