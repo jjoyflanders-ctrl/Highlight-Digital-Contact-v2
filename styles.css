@@ -278,3 +278,41 @@ code{font-family:var(--mono); background:#eef2f7; padding:2px 6px; border-radius
   }
 }
 
+@media (max-width: 860px){
+
+  /* QR outer card centered */
+  .mQrBox{
+    display:flex !important;
+    justify-content:center !important;
+  }
+
+  /* Make the QR container a positioning box */
+  #qrMobile.qr--mobile{
+    width: 210px !important;
+    height: 210px !important;
+    position: relative !important;
+    padding: 0 !important;
+    border-radius: 22px !important;
+    background: #fff !important;
+    border: none !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08) !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+  }
+
+  /* Force the generated QR to be perfectly centered */
+  #qrMobile.qr--mobile img,
+  #qrMobile.qr--mobile canvas,
+  #qrMobile.qr--mobile table{
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    /* Keep it slightly inset so it never clips */
+    width: 196px !important;
+    height: 196px !important;
+
+    display:block !important;
+  }
+}
