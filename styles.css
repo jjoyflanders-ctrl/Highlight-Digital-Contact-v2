@@ -434,13 +434,25 @@ code{font-family:var(--mono); background:#eef2f7; padding:2px 6px; border-radius
 
 
 /* === Desktop search: keep Open button beside the search input === */
-.searchBox{ flex-wrap: nowrap !important; }
-.searchInput{
-  width: auto !important;
-  flex: 1 1 320px;
-  min-width: 220px;
-}
+.topBar{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.searchBox{ display:flex; align-items:center; gap:10px; flex-wrap:nowrap !important; width:100%; max-width:640px; }
+.searchInput{ flex:1 1 auto; min-width:220px; width:auto !important; }
+#employeeGo{ white-space:nowrap; }
 
 /* === Desktop: remove the initials circle/avatar === */
-.avatar{ display: none !important; }
-.desktopCard__left{ gap: 0 !important; }
+.avatar{ display:none !important; }
+
+/* === Make Send to Phone button green like primary === */
+#sendToPhoneDesktop{
+  background:#3F845B !important;
+  color:#fff !important;
+  border:none !important;
+  box-shadow: 0 12px 28px rgba(63,132,91,.25);
+}
+#sendToPhoneDesktop:hover{ filter:brightness(1.06); }
+
+/* Keep primary Save button consistent if needed */
+#saveBtnDesktop{ box-shadow: 0 12px 28px rgba(63,132,91,.25); }
+
+/* Install/Download button */
+#installBtn{ white-space:nowrap; }
