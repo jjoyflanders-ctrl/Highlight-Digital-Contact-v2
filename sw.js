@@ -1,4 +1,4 @@
-const CACHE="highlight-contact-v8";
+const CACHE="highlight-contact-v9";
 const ASSETS=["./","./index.html","./styles.css","./app.js","./employees.csv","./manifest.webmanifest",
 "./assets/icon-192.png","./assets/icon-512.png","./assets/header.png","./assets/hero.png"];
 self.addEventListener("install",(e)=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()));});
